@@ -1,6 +1,6 @@
 $(function () {
 	//Connect socket io
-	const socket = io("http://10.30.30.88:9999");
+	const socket = io("https://nodejs-socket-io.herokuapp.com/");
 	let response = {};
 	let username = null;
 	let notificationSound = $("#newMessage")[0];
