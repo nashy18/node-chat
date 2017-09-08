@@ -1,0 +1,80 @@
+<html>
+
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link href="public/chat.css" rel="stylesheet" type="text/css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+	<script src="public/chat.js"></script>
+	<title>
+		Chat Club
+	</title>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">&nbsp</div> 
+		<div class="row" >
+			<audio id="newMessage">
+				<source src="public/notification.ogg" type="audio/ogg">Your browser does not support the audio element.
+			</audio>
+			<div class="col-md-8">
+				<div class="panel panel-primary">
+					<div class="panel-heading" id="title"></div>
+					<div class="panel-body  pre-scrollable" style="min-height:750px;max-height:750px;">
+						<ul id="messages" class="list-group"></ul>
+					</div>
+				</div>
+				<!-- <div class="well" style="min-height:750px;">
+					<ul id="messages"></ul>
+				</div> -->
+			</div>
+			<!-- <div class="col-md-1">&nbsp;</div> -->
+			<div class="col-md-4" id="userConnected">
+				<div class="row">
+					<div class="panel panel-danger">
+						<div class="panel-heading" style="min-height:37px;">
+							<span class="pull-left">Users login history:&nbsp<span id="userHistorycount" class="badge"></span></span>						
+						</div>
+						<div class="panel-body  pre-scrollable" style="min-height:350px;max-height:350px;">
+							<ul id="userHistory" class="list-group"></ul>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="panel panel-success">
+						<div class="panel-heading" style="min-height:37px;">							
+							<span class="pull-left">Online Users:&nbsp <span id="onlineUserCount" class="badge"></span></span>
+						</div>
+						<div class="panel-body  pre-scrollable" style="min-height:350px;max-height:350px;">
+							<ul id="userOnline" class="list-group"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<form action="">
+				<div class="col-md-11 form-group">
+					<input id="txtMessage" class="form-control" autocomplete="off" />
+				</div>
+				<div class="col-md-1 form-group">
+					<button id="btnSend" type="submit" class="btn btn-block btn-success"><span class="glyphicon glyphicon-envelope">&nbsp;</span>Send</button>
+				</div>
+			</form>
+		</div>
+		<div class="row">&nbsp</div> 
+		<div class="row text-center">
+			<p>© Copyright <a href="mailto:nashy18@gmail.com">Avinash Kumar</a> | <a href="tel://91-9738378190">+91-9738378190</a></p>
+		</div> 
+	</div>
+</body>
+
+</html>
